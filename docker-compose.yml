@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+
+  mysql:
+    image: mysql
+    networks:
+      - interna
+
+  wordpress:
+    image: wordpress
+    ports:
+      - 80:80
+    networks:
+      - interna
+    depends_on:
+      - mysql
+    deploy:
+      mode: replicated
+      replicas: 1
+
+networks:
+    interna:
