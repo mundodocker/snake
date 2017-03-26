@@ -7,7 +7,7 @@ services:
     networks:
       - interna
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=senha
       - MYSQL_DATABASE=wordpress
 
   wordpress:
